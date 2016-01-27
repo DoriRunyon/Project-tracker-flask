@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Project Tracker</title>
+</head>
+
+<body>
+
+<form action="/student">
+    <label>Enter GitHub username
+        <input type="text" name="github">
+    </label>
+    <input type="submit" value="Display Student">
+</form>
+
+ <a href="/create_new">Add a new student</a>
+
+ {% for message in get_flashed_messages() %}
+    <p style="color:red; font-weight:bold">{{ message }}</p>
+ {% endfor %} 
+
+</body>
+</html>
